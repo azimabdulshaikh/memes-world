@@ -1,17 +1,12 @@
-import { Button } from 'semantic-ui-react';
-const button = (props) => (
-    <div>
-        <input
-            type="file"
-            onChange={props.changed}
-            ref={fileInput=>this.fileInput=fileInput}
-        />
-        <Button
-            circular
-            icon="add"
-            onClick={()=>this.fileInput.click()}
-             />
-    </div>
+import React from "react";
+import { Button } from "semantic-ui-react";
+import Classes from "./AddButton.module.css";
 
-)
-export default button;
+export default function AddButton() {
+   return (
+      <div>
+         <Button className={Classes.Button} content="Primary" />
+         <Button content="Secondary" secondary />
+      </div>
+   );
+}

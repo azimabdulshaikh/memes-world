@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Index() {
+export default function Wrapper() {
    return (
       <div>
-         <h1>Im Home</h1>
+         <h1> Im Wrapper </h1>
       </div>
    );
 }

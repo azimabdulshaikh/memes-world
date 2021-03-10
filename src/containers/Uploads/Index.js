@@ -1,22 +1,15 @@
-import { React ,Component } from 'react';
-import Button from '../../components/AddButton/AddButton'
-class AddButton extends Component{
-    state={
-        selectImage:null
-    }
-    fileSelectedHandler = event =>{
-        this.setState({
-            selectImage:event.target.files[0]
-        })
-    }
+import React, { Component } from "react";
 
+export class Index extends Component {
+   static propTypes = {};
 
-    render (){
-        return(
-            <div>
-                <Button changed={this.fileSelectedHandler}/>
-            </div>
-        )
-    }
+   render() {
+      return (
+         <div>
+            <h1> Upload index</h1>
+         </div>
+      );
+   }
 }
-export default AddButton;
+
+export default Index;

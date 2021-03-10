@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Index() {
+export default function Edit() {
    return (
       <div>
-         <h1>Im Home</h1>
+         <h1>Upload Edit</h1>
       </div>
    );
 }
