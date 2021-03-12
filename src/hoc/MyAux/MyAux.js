@@ -1,4 +1,2 @@
-import React from "react";
-const MyAux = (props) => <div>{props.children}</div>;
-
+const MyAux = (props) => props.children;
 export default MyAux;

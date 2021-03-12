@@ -1,9 +1,13 @@
 import React from "react";
+import Header from "../../components/UI/Header/Header";
+import Footer from "../../components/UI/Footer/Footer";
 
-export default function Wrapper() {
+const Wrapper = (props) => {
    return (
       <div>
-         <h1> Im Wrapper </h1>
+         <Header content={props.content} />
+         <Footer />
       </div>
    );
-}
+};
+export default Wrapper;

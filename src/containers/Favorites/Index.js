@@ -1,9 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
+import Wrapper from "../../hoc/Wrapper/Wrapper";
+class Index extends Component {
+   state = {};
 
-export default function Index() {
-   return (
-      <div>
-         <h1>Im Fav Container</h1>
-      </div>
-   );
+   render() {
+      return (
+         <div>
+            <Wrapper content="Favourites" />
+         </div>
+      );
+   }
 }
+export default Index;
