@@ -1,0 +1,10 @@
+div.ui.card{
+    margin:0 auto;
+}
+
+.category{
+    float: left;
+}
+.icon{
+    float: right;
+}

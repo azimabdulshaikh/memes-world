@@ -1,0 +1,33 @@
+.NewMeme{
+    background-color: #fff;
+    margin: 0 2rem;
+}
+.ui.fluid.button{
+    background-color: #152138;
+    color: #fff;
+}
+.NewMeme input{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.NewMeme h2{
+    background-color: #97A4Af;
+    color: #fff;
+}
+.NewMeme h6{
+    color: #A1A5A8;
+    float: left;
+    font-size:medium;
+    font-weight: 300;
+}
+a{
+    margin-left: 1rem;
+    color: #fff;
+    float: left;
+}
+.NewMeme img{
+    margin-bottom: 2rem;
+}
+a:hover{
+    color: #152138;
+}

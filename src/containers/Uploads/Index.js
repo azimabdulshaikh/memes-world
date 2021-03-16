@@ -1,22 +1,45 @@
-import { React ,Component } from 'react';
-import Button from '../../components/AddButton/AddButton'
-class AddButton extends Component{
-    state={
-        selectImage:null
-    }
-    fileSelectedHandler = event =>{
-        this.setState({
-            selectImage:event.target.files[0]
-        })
+import { Component } from 'react';
+import {uploads} from '../../data';
+import List from '../../components/Uploads/Uploads';
+import AddButton from '../../components/AddButton/AddButton';
+import TabExampleActiveIndex from '../../components/UI/SwitchTab/SwitchTab'
+class Upload extends Component {
+    state = {
+        data: [],
+        activeIndex:0
     }
 
-
-    render (){
-        return(
+    componentDidMount() {
+        const updatedData = uploads.map(list => {
+            return {
+                ...list
+            }
+        });
+        this.setState({ data: updatedData });
+    }
+    handleTabChange = (e, { activeIndex }) =>this.setState({ activeIndex: activeIndex });
+    
+    render() {
+        const lists = this.state.data.map(list => {
+            return (
+                <List
+                    key={list.id}
+                    imgSrc={list.image}
+                    category={list.category} />
+            );
+        });
+        return (
             <div>
-                <Button changed={this.fileSelectedHandler}/>
+                <TabExampleActiveIndex/>
+                {lists}
+                <AddButton />
             </div>
-        )
+        );
+    
     }
 }
-export default AddButton;
+
+
+
+
+export default Upload;

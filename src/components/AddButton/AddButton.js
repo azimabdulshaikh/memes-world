@@ -1,16 +1,10 @@
-import { Button } from 'semantic-ui-react';
+import {Link} from 'react-router-dom'
+import {Button,Icon} from 'semantic-ui-react';
 const button = (props) => (
     <div>
-        <input
-            type="file"
-            onChange={props.changed}
-            ref={fileInput=>this.fileInput=fileInput}
-        />
-        <Button
-            circular
-            icon="add"
-            onClick={()=>this.fileInput.click()}
-             />
+        <Button as ={Link} to="/addmeme" circular >
+            <Icon name="add"/>
+        </Button>
     </div>
 
 )
