@@ -1,25 +1,25 @@
 import "./containers/App.css";
 import { React, Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route,Switch } from "react-router-dom";
 import Home from "./containers/Home/Index";
 import Favourite from "./containers/Favorites/Index";
 import Uploads from "./containers/Uploads/Index";
 import UploadsEdit from "./containers/Uploads/Edit";
-import UploadsNew from "./containers/Uploads/New";
-// import AddButton from "./components/UI/AddMeme/AddMeme";
+import New from "./containers/Uploads/New";
 
 class App extends Component {
    render() {
       return (
          <div className="App">
-            <BrowserRouter>
-               <Route path="/" exact component={Home} />
-               <Route path="/favourites" component={Favourite} />
-               <Route path="/uploads" exact component={Uploads} />
-               <Route path="/uploads/new" component={UploadsNew} />
-               <Route path="/uploads/id/edit" component={UploadsEdit} />
-               {/* <AddButton /> */}
-            </BrowserRouter>
+               <BrowserRouter>
+                  <Switch>
+                     <Route exact path="/favourites" component={Favourite} />
+                     <Route exact path="/uploads"  component={Uploads} />
+                     <Route exact path="/uploads/new" component={New} />
+                     <Route exact path="/uploads/id/edit" component={UploadsEdit} />
+                     <Route  path="/" exact component={Home} />
+                  </Switch>
+               </BrowserRouter>
          </div>
       );
    }

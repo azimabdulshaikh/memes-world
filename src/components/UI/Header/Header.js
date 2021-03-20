@@ -1,19 +1,21 @@
 import React from "react";
-import { Icon } from "semantic-ui-react";
+import { Icon,Header } from "semantic-ui-react";
 
-const Header = (props) => {
-   const headerContent =
-      props.content === "Home" ? (
-         <Icon name="search" size="big" />
-      ) : props.content === "Favorite" ? (
-         <Icon name="arrow back" size="big" />
-      ) : null;
+const header = (props) => {
+   const home =<div>Memes World <Icon name="search" size="big" /></div>
+   const favorites = <div>  <Icon name="arrow back" size="big" /> Favorites</div>
+   const uploads =  <Header fixed='top' as='h2'  icon='arrow back' content='My Uploads'/>
+
+   const header =
+      props.content === "Home"  ? home
+       : props.content === "Favorite" ? favorites
+       : props.content === "Uploads"? uploads
+       :null;
 
    return (
       <div>
-         <h2>{props.content}</h2>
-         {headerContent}
+         {header}
       </div>
    );
 };
-export default Header;
+export default header;

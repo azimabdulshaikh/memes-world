@@ -6,7 +6,7 @@ const Wrapper = (props) => {
    return (
       <div>
          <Header content={props.content} />
-         <Footer />
+         {/* <Footer /> */}
       </div>
    );
 };
