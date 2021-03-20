@@ -1,0 +1,49 @@
+.card{
+    width : 360px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.imgcard{
+    width: 360px;
+    height: 360px;
+    border-bottom: 13px solid #C0CCDA;
+    border-top: 13px solid #C0CCDA;
+    align-items: center;
+}
+
+.border{
+    border: solid 1px rgb(214, 209, 209);
+    margin-top: -5px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons{
+    color: #fff;
+    border: none;
+    border-style: none;
+}
+
+
+
+.txt {
+    color: gray;
+}
+
+.buttons:hover {
+    color: red;
+    size: 20px;
+
+}
+
+@media (min-width :411px ) and (min-width: 360px) {
+    .imgcard{
+        width: 360px;
+        height: 200px;
+        align-items: center;
+    }
+}
+
+

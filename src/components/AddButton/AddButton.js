@@ -1,17 +1,30 @@
-import { Button } from 'semantic-ui-react';
-const button = (props) => (
-    <div>
-        <input
-            type="file"
-            onChange={props.changed}
-            ref={fileInput=>this.fileInput=fileInput}
-        />
-        <Button
-            circular
-            icon="add"
-            onClick={()=>this.fileInput.click()}
-             />
-    </div>
+import React from 'react'
+import { Icon } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import './AddButton.css';
 
-)
-export default button;
+
+    const addbutton = () => ({
+        render() {const style = {
+            position: 'relative',
+            position : 'sticky',
+            marginLeft:'180px',
+            bottom : '90px',
+            color : 'white',
+        }; 
+        
+          return (
+            
+              // <button as={Link} to = '/Favourites'>
+            <Link to ='/New.js'>
+              <Icon name='add circle' size ='huge' style={style}  ></Icon>
+            </Link>
+            //  </button>
+             
+          );
+     }
+    })
+   
+
+
+export default addbutton;
