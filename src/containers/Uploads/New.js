@@ -1,55 +1,51 @@
-import { Component } from 'react';
-import Wrapper from "../../Hoc/Wrapper/Wrapper";
-import {Card} from '../../data'
-
+import { React, Component } from 'react';
+import Form from '../../components/UI/Form/Form';
+import image from '../../assets/upload.png'
 class New extends Component {
     state = {
-        file: 'null',
-        category:'',
-        
+        file: image,
+        category: '',
+        data: null
     }
-
-    
 
 
     imageSelectHandler(event) {
         this.setState({
             file: URL.createObjectURL(event.target.files[0])
-            
+
         })
     }
-    categorySelectHandler=(e,{value})=>this.setState({category:value})
+    categorySelectHandler = (e, {value}) => this.setState({ category:value })
+
+
 
     render() {
         const options = [
             {
-              key: 'Student',
-              text: 'Student',
-              value: 'Student',
+                key: 'Student',
+                text: 'Student',
+                value: 'Student',
             },
             {
-              key: 'Trending',
-              text: 'Trending',
-              value: 'Trending',
+                key: 'Trending',
+                text: 'Trending',
+                value: 'Trending',
             },
             {
-              key: 'Funny',
-              text: 'Funny',
-              value: 'Funny',
+                key: 'Funny',
+                text: 'Funny',
+                value: 'Funny',
             }]
-
-
         return (
             <div>
-                <Wrapper content="Home">
-                    Hey there
-                </Wrapper>
-                <NewMeme
+                <Form
                     changedImage={(event) => this.imageSelectHandler(event)}
                     imgSrc={this.state.file}
                     options={options}
                     value={this.state.category}
                     changedInput={this.categorySelectHandler}
+                    reference={input=>this.file = input}
+                    clicked
                 />
             </div>
         )
@@ -57,3 +53,4 @@ class New extends Component {
     }
 }
 export default New;
+

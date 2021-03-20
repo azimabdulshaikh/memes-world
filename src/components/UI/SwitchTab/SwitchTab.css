@@ -1,0 +1,16 @@
+.tabs{
+    background-color: #C0CCDA ;
+}
+.tabs>.ui.secondary.inverted.pointing.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border:none;
+}
+.tabs>.ui.secondary.inverted.pointing.menu>.item{
+    justify-content: center;
+    width: 33.33%;
+}
+.tabs>.ui.secondary.inverted.pointing.menu .active.item{
+    border-color: grey;
+}

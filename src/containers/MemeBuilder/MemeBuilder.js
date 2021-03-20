@@ -1,8 +1,5 @@
 import { React, Component } from 'react';
-import NewMeme from '../../components/NewMeme/NewMeme';
-import Wrapper from "../../Hoc/Wrapper/Wrapper";
-import {uploads} from '../../data';
-
+import Form from '../../components/UI/Form/Form'
 class MemeBuilder extends Component {
     state = {
         file: 'null',
@@ -22,7 +19,6 @@ class MemeBuilder extends Component {
     
 
     render() {
-        console.log('data',uploads)
         const options = [
             {
               key: 'Student',
@@ -41,10 +37,7 @@ class MemeBuilder extends Component {
             }]
         return (
             <div>
-                <Wrapper content="Home">
-                    Hey there
-                </Wrapper>
-                <NewMeme
+                <Form
                     changedImage={(event) => this.imageSelectHandler(event)}
                     imgSrc={this.state.file}
                     options={options}

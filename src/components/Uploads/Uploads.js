@@ -1,12 +1,17 @@
 import React from 'react'
 import Card from '../UI/Card/Card'
 const Uploads = (props) => {
+    const lists = props.data.map(list => {
+        return (
+            <Card
+                key={list.id}
+                imgSrc={list.image}
+                category={list.category} />
+        );
+    });
     return (
         <div>
-            <Card
-             key={props.key}
-             imgSrc={props.imgSrc}
-             category={props.category}/>
+            {lists}
         </div>
     )
 }

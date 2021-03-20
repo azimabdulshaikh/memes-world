@@ -1,12 +1,15 @@
 import { Component } from 'react';
-import {uploads} from '../../data';
-import List from '../../components/Uploads/Uploads';
+import { uploads } from '../../data';
 import AddButton from '../../components/AddButton/AddButton';
-import TabExampleActiveIndex from '../../components/UI/SwitchTab/SwitchTab'
+import SwitchTab from '../../components/UI/SwitchTab/SwitchTab';
+import Wrapper from '../../Hoc/Wrapper/Wrapper';
+import Aux from '../../Hoc/MyAux/MyAux';
+import List from '../../components/Uploads/Uploads';
+import './Index.css'
 class Upload extends Component {
     state = {
         data: [],
-        activeIndex:0
+        activeIndex: 0
     }
 
     componentDidMount() {
@@ -17,29 +20,29 @@ class Upload extends Component {
         });
         this.setState({ data: updatedData });
     }
-    handleTabChange = (e, { activeIndex }) =>this.setState({ activeIndex: activeIndex });
-    
+
+    handleTabChange = (e, { activeIndex }) => this.setState({ activeIndex: activeIndex });
+
     render() {
-        const lists = this.state.data.map(list => {
-            return (
-                <List
-                    key={list.id}
-                    imgSrc={list.image}
-                    category={list.category} />
-            );
-        });
+
         return (
             <div>
-                <TabExampleActiveIndex/>
-                {lists}
-                <AddButton />
+                <Aux>
+                    <Wrapper content="Uploads"/>
+                        <SwitchTab
+                            content="Uploads"
+                            data={this.state.data}
+                            activeIndex={this.activeIndex}
+                            handleTabChange={this.handleTabChange} />
+                        <List data={this.state.data}/>
+                        <AddButton className="addbutton"/>
+                </Aux>
             </div>
         );
-    
+
     }
 }
 
-
-
-
 export default Upload;
+
+
