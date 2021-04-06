@@ -1,6 +1,6 @@
 import "./containers/App.css";
 import { React, Component } from "react";
-import { BrowserRouter, Route,Switch } from "react-router-dom";
+import { Route,Switch } from "react-router-dom";
 import Home from "./containers/Home/Index";
 import Favourite from "./containers/Favorites/Index";
 import Uploads from "./containers/Uploads/Index";
@@ -11,7 +11,6 @@ class App extends Component {
    render() {
       return (
          <div className="App">
-               <BrowserRouter>
                   <Switch>
                      <Route exact path="/favourites" component={Favourite} />
                      <Route exact path="/uploads"  component={Uploads} />
@@ -19,7 +18,6 @@ class App extends Component {
                      <Route exact path="/uploads/id/edit" component={UploadsEdit} />
                      <Route  path="/" exact component={Home} />
                   </Switch>
-               </BrowserRouter>
          </div>
       );
    }
