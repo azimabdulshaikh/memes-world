@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Wrapper from "../../Hoc/Wrapper/Wrapper";
+import Wrapper from "../../hoc/Wrapper/Wrapper";
 import { favorite } from '../../data';
 import AddButton from '../../components/AddButton/AddButton';
 import SwitchTab from '../../components/UI/SwitchTab/SwitchTab';
-import Aux from '../../Hoc/MyAux/MyAux';
+import Aux from '../../hoc/MyAux/MyAux';
 import List from '../../components/Uploads/Uploads';
 class Index extends Component {
    state = {
@@ -37,3 +37,4 @@ class Index extends Component {
    }
 }
 export default Index;
+

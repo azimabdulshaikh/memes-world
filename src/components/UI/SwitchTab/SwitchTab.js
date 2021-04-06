@@ -85,3 +85,4 @@ const switchTab = (props) => {
 }
 
 export default switchTab
+

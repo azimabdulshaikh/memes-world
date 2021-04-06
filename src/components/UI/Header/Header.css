@@ -1,0 +1,44 @@
+.header{
+    width: 360px;
+    height: 60px;
+    background-color: #C0CCDA;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    cursor: pointer;  
+    top: 0;
+    z-index: 1000;
+   position: relative;
+}
+
+.header .text{
+    margin-top: 15px;
+}
+
+.header h3{
+    margin-left: 20px;
+    margin-top: 18px;
+  }
+
+.header .search {
+  margin-top: 20px;
+  margin-left: 160px;
+}
+
+.header .header-h3{
+  margin-top: 20px;
+}
+
+
+/* .searchBox{
+    transition: 0.2s;
+  border-radius: 30px;
+  width: 40px;
+  margin-top:10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  display: none;
+  transition: 0.1s;
+  display: none;
+} */

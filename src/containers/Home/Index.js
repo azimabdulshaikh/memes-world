@@ -2,8 +2,8 @@ import { React, Component } from 'react';
 import { home } from '../../data';
 import AddButton from '../../components/AddButton/AddButton';
 import SwitchTab from '../../components/UI/SwitchTab/SwitchTab';
-import Wrapper from '../../Hoc/Wrapper/Wrapper';
-import Aux from '../../Hoc/MyAux/MyAux';
+import Wrapper from '../../hoc/Wrapper/Wrapper';
+import Aux from '../../hoc/MyAux/MyAux';
 import List from '../../components/Uploads/Uploads';
 class Home extends Component{
     state = {
@@ -41,5 +41,3 @@ class Home extends Component{
     }
 }
 export default Home; 
-
-

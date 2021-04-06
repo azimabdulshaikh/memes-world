@@ -1,0 +1,14 @@
+.footer{
+   width: 360px;
+   border: none;
+   justify-content: center;
+   position:fixed;
+   bottom: 0 !important;;
+   width:100%;
+   display: inline-block;
+}
+
+
+.colom{
+   flex-direction:column;
+}

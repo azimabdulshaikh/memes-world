@@ -21,24 +21,3 @@ const card = (props) => {
 }
 export default card;
 
-
-
-
-        //     <center>
-        //     <div class="ui card" className="card">
-        //         <div class="image">
-        //             <img className="imgcard" src={props.imgSrc} />
-        //         </div>
-        //         <div class="content" className="border">
-        //             <div class="left floated">
-        //                 <h4 className="txt"> # {props.category}</h4>
-        //             </div>
-        //             <span class="right floated">
-        //                 <button className="buttons">
-        //                     <i class="heart icon" ></i> 12
-        //                 </button>
-        //                 <i class="trash alternate outline"></i>
-        //             </span>
-        //         </div>
-        //     </div>
-        // </center>

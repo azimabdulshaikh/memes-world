@@ -1,10 +1,11 @@
 import React from "react";
 import { Icon,Header } from "semantic-ui-react";
-
+import './Header.css';
+   
 const header = (props) => {
-   const home =<div>Memes World <Icon name="search" size="big" /></div>
-   const favorites = <div>  <Icon name="arrow back" size="big" /> Favorites</div>
-   const uploads =  <Header fixed='top' as='h2'  icon='arrow back' content='My Uploads'/>
+   const home =<div className="header"> <h3 className ="header-h3">Memes World </h3> <Icon name="search" size="large"  className="search"/></div>
+   const favorites = <div className="header">  <Icon name="arrow left" size="big" className="text"/><h3> Favourites</h3></div>
+   const uploads =   <div className="header">  <Icon name="arrow left" size="big" className="text"/><h3> My Uploads</h3></div>
 
    const header =
       props.content === "Home"  ? home
@@ -13,7 +14,7 @@ const header = (props) => {
        :null;
 
    return (
-      <div>
+      <div> 
          {header}
       </div>
    );

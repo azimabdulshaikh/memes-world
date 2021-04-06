@@ -2,8 +2,8 @@ import { Component } from 'react';
 import { uploads } from '../../data';
 import AddButton from '../../components/AddButton/AddButton';
 import SwitchTab from '../../components/UI/SwitchTab/SwitchTab';
-import Wrapper from '../../Hoc/Wrapper/Wrapper';
-import Aux from '../../Hoc/MyAux/MyAux';
+import Wrapper from '../../hoc/Wrapper/Wrapper';
+import Aux from '../../hoc/MyAux/MyAux';
 import List from '../../components/Uploads/Uploads';
 import './Index.css'
 class Upload extends Component {
@@ -44,5 +44,3 @@ class Upload extends Component {
 }
 
 export default Upload;
-
-
