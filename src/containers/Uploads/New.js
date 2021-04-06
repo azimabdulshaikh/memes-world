@@ -1,6 +1,9 @@
 import { React, Component } from 'react';
 import Form from '../../components/UI/Form/Form';
-import image from '../../assets/upload.png'
+import image from '../../assets/upload.png';
+import { connect } from 'react-redux';
+import * as actions from '../../store/actions/index';
+
 class New extends Component {
     state = {
         file: image,
@@ -12,10 +15,13 @@ class New extends Component {
     imageSelectHandler(event) {
         this.setState({
             file: URL.createObjectURL(event.target.files[0])
-
         })
     }
-    categorySelectHandler = (e, {value}) => this.setState({ category:value })
+    categorySelectHandler = (e) => this.setState({ category:e.target.value })
+
+    componentDidMount() {
+        console.log(this.props.fetchCategories())
+    }
 
 
 
@@ -43,14 +49,27 @@ class New extends Component {
                     imgSrc={this.state.file}
                     options={options}
                     value={this.state.category}
-                    changedInput={this.categorySelectHandler}
-                    reference={input=>this.file = input}
-                    clicked
+                    changedCategory={this.categorySelectHandler}
                 />
             </div>
         )
 
     }
 }
-export default New;
+
+const mapStateToProps = (state) => {
+    return {
+        categories: state.category.categoriesList
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchCategories: () => dispatch(actions.fetchCategories())
+    }
+}
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(New);
 

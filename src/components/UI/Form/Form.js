@@ -13,14 +13,14 @@ const form = (props) =>(
                 selection
                 options={props.options}
                 value={props.value}
-                onChange={props.changedInput}
+                onClick={props.changedCategory}
             />
             <h6>Add meme</h6>
-            <div className="position-relative">
-            <input type="file" className="file-upload" ref={props.reference} onChange={props.changedImage} />
-            <Image src={props.imgSrc} onClick={props.clicked} size="large" alt="meme" />
+            <div className="position-relative" >
+                <input type="file" className="file-upload" onChange={props.changedImage}/>
+                <Image src={props.imgSrc}  size="large" alt="meme" />
             </div>
-            <Button as={Link} to="/upload/new" fluid >Save</Button>
+            <Button  as={Link} to="/upload/new" fluid >Save</Button>
         </div>
     </div>
 
