@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from '../src/App';
-import reportWebVitals from './reportWebVitals';
-import 'semantic-ui-css/semantic.min.css'
+// // <<<<<<< HEAD
+// // import React from 'react';
+// // import ReactDOM from 'react-dom';
+// // import './index.css';
+// // import App from '../src/App';
+// // import reportWebVitals from './reportWebVitals';
+// // import 'semantic-ui-css/semantic.min.css'
+// =======
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "semantic-ui-css/semantic.min.css";
+// >>>>>>> 22561c6e4855ccbd7be797b3bc4f822bf0d09eff
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+   <React.StrictMode>
+      <App />
+   </React.StrictMode>,
+   document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

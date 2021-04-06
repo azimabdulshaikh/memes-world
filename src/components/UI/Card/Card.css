@@ -1,0 +1,126 @@
+div.ui.one.cards{
+    width: 360px;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 350px;
+}
+
+
+.card__content{
+    width: 360px;
+    
+}
+
+.icon-delete{
+    float: right;
+}
+
+.ui.cards{
+    width: 360px;
+    margin: 0;
+}
+
+.ui.one.cards{
+    width: 360px;
+}
+
+
+.ui.card>.image:not(.ui)>img, .ui.cards>.card>.image:not(.ui)>img {
+    width: 350px;
+    
+}
+
+.tabs{
+    width: 360px;
+}
+
+.Card.Group{
+    width: 360px;
+}
+
+
+.category{
+    float: left;
+}
+
+.ui.cards>.card{
+    margin: 0;
+}
+
+
+
+.content{
+    margin-left: 20px;
+}
+
+i.icon{
+    margin-left: 1rem;
+}
+
+.card_style{
+    margin-bottom: 20px;
+}
+
+
+.ui.card>.image:not(.ui)>img, .ui.cards>.card>.image:not(.ui)>img{
+    border-top: 0.8rem solid #C0CCDA  !important;
+    border-bottom: 0.8rem solid #C0CCDA  !important;
+}
+
+.ui.header {
+    display: none;
+}
+
+
+/* .card{
+    width : 360px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.imgcard{
+    width: 360px;
+    height: 360px;
+    border-bottom: 13px solid #C0CCDA;
+    border-top: 13px solid #C0CCDA;
+    align-items: center;
+}
+
+.border{
+    border: solid 1px rgb(214, 209, 209);
+    margin-top: -5px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons{
+    color: #fff;
+    border: none;
+    border-style: none;
+}
+
+
+
+.txt {
+    color: gray;
+}
+
+.buttons:hover {
+    color: red;
+    size: 20px;
+
+}
+
+@media (min-width :411px ) and (min-width: 360px) {
+    .imgcard{
+        width: 360px;
+        height: 200px;
+        align-items: center;
+    }
+} */
+
+

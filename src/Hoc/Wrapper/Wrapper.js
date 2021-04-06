@@ -1,13 +1,13 @@
 import React from "react";
-import MyAux from "../MyAux/MyAux"
 import Header from "../../components/UI/Header/Header";
-
+import Footer from "../../components/UI/Footer/Footer";
 
 const Wrapper = (props) => {
    return (
-      <MyAux>
+      <div>
          <Header content={props.content} />
-      </MyAux>
+         {/* <Footer /> */}
+      </div>
    );
 };
 export default Wrapper;

@@ -2,20 +2,13 @@
    width: 360px;
    border: none;
    justify-content: center;
-   display: flex;
-   flex-direction: row;
    position:fixed;
-   bottom:0;
+   bottom: 0 !important;;
    width:100%;
+   display: inline-block;
 }
 
-.btn{
-   background: #fff;
-   background-color: none;
-   display: flex;
-   padding: 0 30px;
-   cursor: pointer;
-   color:gray;
-}
 
- 
+.colom{
+   flex-direction:column;
+}

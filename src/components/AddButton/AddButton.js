@@ -1,25 +1,27 @@
 import React from 'react'
-import { Icon } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-import './AddButton.css';
+import {Link} from 'react-router-dom'
+import {Icon} from 'semantic-ui-react';
 
-
-    const addbutton = () => ({
+    const addbutton = (props)  => ({
         render() {const style = {
-            position: 'relative',
             position : 'sticky',
-            marginLeft:'180px',
-            bottom : '90px',
             color : 'white',
+            borderRadius:'50%',
+            backgroundColor:'#000',
+            padding: '15px',
+            width:'40px',
+            height:'40px',
+            float : 'right',
+            marginTop:'-100px'
+            
         }; 
         
           return (
             
-              // <button as={Link} to = '/Favourites'>
-            <Link to ='/New.js'>
-              <Icon name='add circle' size ='huge' style={style}  ></Icon>
+            <Link to ='/uploads/new'>
+              <Icon name='plus' size ='small' style={style}  ></Icon>
             </Link>
-            //  </button>
+            
              
           );
      }

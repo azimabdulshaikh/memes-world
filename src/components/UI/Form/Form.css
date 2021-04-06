@@ -1,0 +1,51 @@
+.form{
+    width: 360px;
+}
+
+i.link.icon, i.link.icons{
+    float: left;
+}
+
+.header__form{
+    height: 60px;
+    background-color: #C0CCDA;
+    padding: 20px;
+    display: flex;
+    /* justify-content: space-between; */
+    color:#fff;
+}
+
+.form-content{
+   padding: 20px 20px;
+}
+
+div.ui.fluid.selection.dropdown{
+    margin-top: 20px;
+    border: none;
+    border-bottom: 1px solid rgba(34,36,38,.15);
+}
+
+
+.file-upload{
+    position: relative;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 10;
+    opacity: 0;
+}
+
+
+.form-content .Btn_save {
+   background-color: #C0CCDA;
+}
+
+h3{
+    color: #fff;
+}
+
+.header .text {
+    color: #fff;
+    margin-top: 19px;
+    margin-left: 12px;
+}
