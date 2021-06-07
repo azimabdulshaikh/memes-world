@@ -11,7 +11,6 @@ const ImageContainer = () => (
             <Card.Content className="card-content" extra>
                <Icon className="Icons heartIcon" fitted name="heart outline" />
                <Icon className="Icons" fitted name="share alternate" />
-               {/* <Icon className="Icons" fitted name="trash" /> */}
             </Card.Content>
          </Card>
       </div>

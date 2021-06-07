@@ -1,16 +1,31 @@
 .tabs{
     background-color: #C0CCDA ;
+    width: 100%;
+    display: block;
+    align-content: center;
+    clear: both; 
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    margin-top: 60px;
 }
 .tabs>.ui.secondary.inverted.pointing.menu{
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     justify-content: space-between;
     border:none;
+
 }
 .tabs>.ui.secondary.inverted.pointing.menu>.item{
     justify-content: center;
-    width: 33.33%;
 }
 .tabs>.ui.secondary.inverted.pointing.menu .active.item{
     border-color: grey;
+}
+
+.right-arrow {
+    position: absolute;
+    z-index: 1;
+    margin-top: 150px;
 }

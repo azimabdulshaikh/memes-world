@@ -8,10 +8,10 @@ export const fetchCategoryStart = () => {
     }
 }
 
-export const fetchCategorySuccess = (category) => {
+export const fetchCategorySuccess = (categoriesList) => {
     return {
         type: actionTypes.FETCH_CATEGORY_SUCCESS,
-        category:category
+        categoriesList:categoriesList,
     }
 }
 
@@ -26,10 +26,9 @@ export const fetchCategoryFail = (error) => {
 export const fetchCategories = () => {
     return dispatch => {
         dispatch(fetchCategoryStart())
-        return axios.get('categories' )
+        return axios.get('categories')
             .then(res => {
-                console.log(res)
-                return dispatch(fetchCategorySuccess(res))
+                return dispatch(fetchCategorySuccess(res.data))
             })
             .catch(error => {
                 return dispatch(fetchCategoryFail(error))

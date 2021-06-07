@@ -1,0 +1,19 @@
+.Footer{
+   position: fixed;
+   border: none;
+   justify-content: space-around;
+   display: flex;
+   bottom: 0 !important;
+   width: 380px;
+   flex-direction: row;
+   background-color: #fff;
+   padding: 10px;
+}
+.colom{
+   position: relative;
+}
+.icon_footer{
+   position: absolute;
+   top:0;
+   left: 30%;
+}

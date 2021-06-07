@@ -1,17 +1,79 @@
-div.ui.card{
-    margin:0 auto;
+div.ui.one.cards{
+    width: 360px;
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden;
 }
+
+img{
+    width: 350px;
+}
+
+
+.card__content{
+    width: 360px;
+    
+}
+
+.icon-delete,.icon-heart,.icon-edit{
+    float: right;
+}
+
+
+.ui.cards{
+    width: 360px;
+    margin: 0;
+}
+
+.ui.one.cards{
+    width: 360px;
+}
+
+
+.ui.card>.image:not(.ui)>img, .ui.cards>.card>.image:not(.ui)>img {
+    width: 350px;
+    
+}
+
+.tabs{
+    width: 360px;
+}
+
+.Card.Group{
+    width: 360px;
+}
+
 
 .category{
     float: left;
 }
 
-.icon-delete{
-    float: right;
+.ui.cards>.card{
+    margin: 0;
 }
+
+
+
+.content{
+    margin-left: 20px;
+}
+
+i.icon{
+    margin-left: 1rem;
+}
+
+.card_style{
+    margin-bottom: 20px;
+}
+
+
 .ui.card>.image:not(.ui)>img, .ui.cards>.card>.image:not(.ui)>img{
     border-top: 0.8rem solid #C0CCDA  !important;
     border-bottom: 0.8rem solid #C0CCDA  !important;
+}
+
+.ui.header {
+    display: none;
 }
 
 

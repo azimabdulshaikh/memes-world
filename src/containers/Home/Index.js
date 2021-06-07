@@ -1,45 +1,96 @@
 import { React, Component } from 'react';
-import { home } from '../../data';
 import AddButton from '../../components/AddButton/AddButton';
 import SwitchTab from '../../components/UI/SwitchTab/SwitchTab';
 import Wrapper from '../../Hoc/Wrapper/Wrapper';
 import Aux from '../../Hoc/MyAux/MyAux';
 import List from '../../components/Uploads/Uploads';
+import { connect } from 'react-redux';
+import * as actions from '../../store/actions/index';
 class Home extends Component{
     state = {
         data: [],
-        activeIndex: 0
+        activeIndex:0
     }
 
     componentDidMount() {
-        const updatedData = home.map(list => {
-            return {
-                ...list
-            }
-        });
-        this.setState({ data: updatedData });
+        console.log(this.props.match)
+       let  id = this.state.activeIndex + 1
+        this.props.fetchCategories()
+        this.props.fetchPosts(id)
+    }
+    // componentWillUpdate(){
+    //    let  id = this.state.activeIndex + 1
+    //     this.props.fetchPosts(id)
+    // }
+
+    editButtonHandler(id){
+        console.log(id)
     }
 
-    handleTabChange = (e, { activeIndex }) => this.setState({ activeIndex: activeIndex });
+    deleteButtonHandler(id){
+        
+    }
 
+
+    toggleHandler = (id)=>{
+        console.log(id)
+        this.props.toggleFavourite(id)
+    }
+
+    likeHandler=()=>{
+        // (this.props.is_favorite)
+    }
+
+    handleTabChange = (e, { activeIndex }) => {
+        this.setState({ activeIndex: activeIndex });
+        this.props.fetchPosts(activeIndex+1)
+    }
     render() {
 
+       
         return (
             <div>
                 <Aux>
                     <Wrapper content="Home"/>
                         <SwitchTab
                             content="Home"
-                            data={this.state.data}
+                            categories={this.props.categories}
                             activeIndex={this.activeIndex}
                             handleTabChange={this.handleTabChange} />
-                        <List data={this.state.data}/>
+                       {this.props.fetchPostsLoading ?
+                       <div>Loading Content please wait...</div> :
+                                <List 
+                                    is_favorite={this.props.is_favorite}
+                                    data={this.props.data}
+                                    clickedLikeButton={this.toggleHandler}
+                                    clickedEditButton={this.editButtonHandler}
+                                    clickedDeleteButton={this.deleteButtonHandler}/>
+                                
+                       }
                         <AddButton className="addbutton"/>
                 </Aux>
             </div>
         );
     }
 }
-export default Home; 
 
 
+
+const mapStateToProps = (state) => {
+    return {
+        categories: state.category.categoriesList,
+        data:state.home.data,
+        fetchPostsLoading:state.home.fetchPostsLoading,
+        // activeIndex:state.home.activeIndex
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchCategories: () => dispatch(actions.fetchCategories()),
+        fetchPosts: (id) => dispatch(actions.fetchPosts(id)),
+        toggleFavourite: (id)=> dispatch(actions.toggleFavourite(id))
+        
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Home); 
