@@ -7,5 +7,5 @@ This project uses
 * [Redux](https://react-redux.js.org/introduction/getting-started)
 ## Concepts learned
 I learned Redux workflow and how to manage state with it.\
-Writing clean and structured code, standard name convention etc.\
+Writing clean and structured code, standard name convention etc.
 
