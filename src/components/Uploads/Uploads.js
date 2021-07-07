@@ -4,7 +4,6 @@ const Uploads = (props) => {
 let lists = []
 if(props.data){
 lists = props.data.map(list => {
-    // console.log(list.id)
         return (
             <Card
                 key={list.id}
@@ -14,11 +13,15 @@ lists = props.data.map(list => {
                 clickedLikeButton={()=> props.clickedLikeButton(list.id)}
                 clickedEditButton={()=>props.clickedEditButton(list.id)}
                 clickedDeleteButton={()=>props.clickedDeleteButton(list.id)}
+                clickedShareButton={()=>props.clickedShareButton(list.id)}
+                open={props.open}
                 is_favorite={props.is_favorite} />
         );
     });
 }
-return  <div style={{ paddingTop: "120px" }}>{lists}</div>;
+ return((props.container=="Favorite") ?  <div style={{paddingTop: "75px",paddingBottom: "60px", marginLeft:"-2px"}}>{lists}</div>:
+//  (props.container=="uploads")?<div style={{ paddingTop: "60px", paddingBottom: "60px", marginLeft:"-2px"}}>{lists}</div>:
+ <div style={{ paddingTop: "120px", paddingBottom: "60px", marginLeft:"-2px"}}>{lists}</div>)
 }
 
 export default Uploads

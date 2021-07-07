@@ -2,3 +2,28 @@
     color: #47525E;
 
 }
+
+.add-btn{
+    position: sticky;
+    color: white;
+    border-radius:50%;
+    background-color:#000;
+    padding: 15px;
+    width:40px;
+    height:40px;
+    float: right;
+    margin-top:-100px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+
+.plus-icon{
+    color : #fff;
+    border-radius:50%;
+    background-color:#47525E;
+    padding: 50px;
+    float : right;
+    z-index: 3;
+}

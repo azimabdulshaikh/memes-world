@@ -1,7 +1,7 @@
 div.ui.one.cards{
     width: 360px;
-    margin: 0;
-    padding: 0;
+    margin-right: 0;
+    padding-right: 3px;
     overflow-x:hidden;
 }
 
@@ -15,7 +15,7 @@ img{
     
 }
 
-.icon-delete,.icon-heart,.icon-edit{
+.icon-delete,.icon-heart,.icon-edit,.icon-share{
     float: right;
 }
 

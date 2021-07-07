@@ -9,11 +9,12 @@ import * as actions from '../../store/actions/index';
 class Home extends Component{
     state = {
         data: [],
-        activeIndex:0
+        activeIndex:0,
+        open:false
     }
 
     componentDidMount() {
-        console.log(this.props.match)
+        // console.log(this.props.match)
        let  id = this.state.activeIndex + 1
         this.props.fetchCategories()
         this.props.fetchPosts(id)
@@ -23,12 +24,17 @@ class Home extends Component{
     //     this.props.fetchPosts(id)
     // }
 
-    editButtonHandler(id){
+    editButtonHandler=(id)=>{
         console.log(id)
     }
 
-    deleteButtonHandler(id){
+    deleteButtonHandler=(id)=>{
         
+    }
+
+    shareButtonHandler=(id)=>{
+        this.setState({open:!this.state.open})
+        console.log(this.state.open)
     }
 
 
@@ -47,7 +53,6 @@ class Home extends Component{
     }
     render() {
 
-       
         return (
             <div>
                 <Aux>
@@ -64,7 +69,9 @@ class Home extends Component{
                                     data={this.props.data}
                                     clickedLikeButton={this.toggleHandler}
                                     clickedEditButton={this.editButtonHandler}
-                                    clickedDeleteButton={this.deleteButtonHandler}/>
+                                    clickedDeleteButton={this.deleteButtonHandler}
+                                    clickedShareButton={this.shareButtonHandler}
+                                    open={this.state.open}/>
                                 
                        }
                         <AddButton className="addbutton"/>

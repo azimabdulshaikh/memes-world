@@ -5,7 +5,7 @@ import Favourite from "./containers/Favorites/Index";
 import Uploads from "./containers/Uploads/Index";
 import Edit from "./containers/Uploads/Edit";
 import Footer from './components/UI/Footer/Footer';
-import  classes from './App.css';
+import classes from './App.css';
 import New from "./containers/Uploads/New";
 
 class App extends Component {

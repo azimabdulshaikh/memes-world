@@ -11,7 +11,7 @@ const fetchPostsStart = (state, action) => {
 }
 
 const fetchPostsSuccess = (state, action) => {
-    console.log((action.data))
+    // console.log((action.data))
     return updateObject(state, { fetchPostsLoading: false, data:action.data})
 }
 

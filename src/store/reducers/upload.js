@@ -11,7 +11,7 @@ const uploadPostStart = (state, action) => {
 }
 
 const uploadPostSuccess = (state, action) => {
-    console.log((action.data))
+    // console.log((action.data))
     return updateObject(state, { postLoading: false})
 }
 

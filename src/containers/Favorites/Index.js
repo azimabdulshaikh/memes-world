@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Wrapper from "../../Hoc/Wrapper/Wrapper";
 import Aux from '../../Hoc/MyAux/MyAux';
+import AddButton from '../../components/AddButton/AddButton';
 import List from '../../components/Uploads/Uploads';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/index';
@@ -31,9 +32,11 @@ class Index extends Component {
                {this.props.fetchPostsLoading ?
                        <div>Loading Content please wait...</div> :
                        <List 
+                            container="Favorite"
                             data={this.props.data}
                             clickedLikeButton={this.toggleHandler}/>
                        }
+                        <AddButton className="addbutton"/>
             </Aux>
          </div>
       );
